@@ -1,0 +1,48 @@
+@font-face {
+  font-family: ostrich-sans-light;
+  src: url("fonts/ostrich-sans-light.woff");
+}
+
+@font-face {
+  font-family: ostrich-sans-inline;
+  src: url("fonts/ostrich-sans-inline-regular.woff");
+}
+
+body{
+  padding: 0 0 7% 0;
+}
+
+.jumbotron.other_color {
+  color: #999967;
+  margin: 2% 0% 3% 0%;
+  opacity: 0.5;
+  padding: 0;
+}
+
+.myPanel {
+  border: 1px solid #4C4C4C;
+  margin: 2% 0%;
+}
+
+.panel-body{
+  background: #B0B0B0;
+  color: #7A7A52;
+  font-family: ostrich-sans-inline;
+  font-size: 3vmin;
+}
+
+.panel-olive{
+  background: #CCCC9A;
+  color: #555555;
+}
+
+.site{
+  background: #666666;
+}
+
+#name {
+  padding: 25% 0;
+  text-align: center;
+  font-family: ostrich-sans-light;
+  font-size: 18vmin;
+}
