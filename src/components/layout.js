@@ -1,45 +1,66 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from "react"
+import { Global, css } from "@emotion/core"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import Header from "../components/header"
+import Footer from "../components/footer"
+import React from "react"
 
-import Header from "./header"
-import "./layout.css"
+const style = css`
+  html,
+  body {
+    font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 300;
+  }
+
+  h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    margin: 0;
+  }
+
+  .container {
+    width: 1640px;
+    min-width: 1640px;
+    margin: 0 auto;
+
+    @media (max-width: 1440px) {
+      width: 1280px;
+      min-width: 1280px;
+    }
+    @media (max-width: 1280px) {
+      width: 976px;
+      min-width: 976px;
+    }
+    @media (max-width: 976px) {
+      width: 768px;
+      min-width: 768px;
+    }
+  }
+`
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <Global styles={style} />
+      <Header />
+      <main>{children}</main>
+      <Footer />
     </>
   )
 }

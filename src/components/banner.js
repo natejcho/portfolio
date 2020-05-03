@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 import React from "react"
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 

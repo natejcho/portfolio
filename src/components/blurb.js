@@ -1,9 +1,8 @@
 import styled from "@emotion/styled"
 import React from "react"
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
-import { Link } from "gatsby"
 
 Blurb.propTypes = {}
 
@@ -22,18 +21,7 @@ const Styled = styled.div`
       @media (max-width: 144px) {
         width: 40%;
       }
-
-      h3 {
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 1.8rem;
-        letter-spacing: 1.5px;
-        margin: 0;
-      }
       p {
-        font-size: 1rem;
-        line-height: 2rem;
-        font-weight: 300;
         margin: 40px 0 72px;
       }
       .btn-row {
@@ -42,8 +30,6 @@ const Styled = styled.div`
           text-transform: uppercase;
           font-size: 0.875rem;
           letter-spacing: 1.5px;
-          color: black;
-          text-decoration: none;
         }
       }
     }
@@ -83,14 +69,14 @@ const Styled = styled.div`
   .black-box {
     background-color: black;
     height: 418px;
-    width: 836px;
+    width: 736px;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
     @media (max-width: 1440px) {
       height: 340px;
-      width: 636px;
+      width: 544px;
     }
 
     &.overlay {
@@ -139,9 +125,6 @@ function Blurb(props) {
               have evolved over the years, sometimes by accident, sometimes on
               purpose (injected humour and the like).
             </p>
-            <div className="btn-row">
-              <Link>View Series</Link>
-            </div>
           </div>
           <div className="images">
             <div className="top-right">

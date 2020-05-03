@@ -16,10 +16,6 @@ const Styled = styled.header`
     justify-content: space-between;
     height: 80px;
 
-    a {
-      text-decoration: none;
-      color: black;
-    }
     .logo {
       a {
         font-weight: 700;

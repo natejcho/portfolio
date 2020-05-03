@@ -17,12 +17,10 @@ const Styled = styled.footer`
     a {
       display: flex;
       margin: 0 8px;
-      height: 24px;
-      width: 24px;
-      text-decoration: none;
-      color: black;
 
       img {
+        height: 24px;
+        width: 24px;
         margin-bottom: 0;
       }
     }
@@ -42,6 +40,7 @@ const Footer = () => {
         </a>
         <a
           href="https://www.linkedin.com/in/nathaniel-cho-99656b125/"
+          className="linkedIn"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -56,6 +55,7 @@ const Footer = () => {
         </a>
         <a
           href="mailto:natejcho@gmail.com?"
+          className="github"
           target="_blank"
           rel="noopener noreferrer"
         >
