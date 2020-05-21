@@ -3,28 +3,28 @@ import React from "react"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import styled from "@emotion/styled"
+import tw from "twin.macro"
 import { Link, graphql } from "gatsby"
 
 const Styled = styled.div`
+font-family: proxima-nova, "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue";
+  sans-serif;
   margin-top: 80px;
 
   article {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    ${tw`max-w-6xl grid grid-cols-4`};
+    
     @media (min-width: 50em) {
       column-gap: 1rem;
     }
 
     header {
       grid-column: full-content;
+      ${tw`mb-5`};
 
-      @media (min-width: 50em) {
-        grid-column: main-content-start / outdent-end;
-      }
-      @media (min-width: 60em) {
-        grid-column: 1;
-        grid-row-end: span 4;
-        text-align: right;
+      h1 {
+        ${tw`my-3 text-3xl`};
       }
     }
 
@@ -58,11 +58,14 @@ const Styled = styled.div`
     }
   }
 
+  hr {
+    ${tw`mt-3`}
+  }
+
   nav {
     display: flex;
     justify-content: space-between;
-    height: 48px;
-    align-items: center;
+    ${tw`h-16 flex justify-between items-center`};
 
     a {
       margin: 0 20px;

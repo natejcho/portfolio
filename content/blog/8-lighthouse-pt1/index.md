@@ -4,9 +4,8 @@ date: "2020-05-21"
 description: google lighthouse airbnb speed performance reddit
 ---
 
-*This is the first in a series I'm doing on Google's Lighthouse tool. Lighthouse is an ["open-source, automated tool for improving the quality of web pages"](https://developers.google.com/web/tools/lighthouse). You can find more information on it at [Google's I/O '19 talk](https://www.youtube.com/watch?v=mLjxXPHuIJo).*
+_This is the first in a series I'm doing on Google's Lighthouse tool. Lighthouse is an ["open-source, automated tool for improving the quality of web pages"](https://developers.google.com/web/tools/lighthouse). You can find more information on it at [Google's I/O '19 talk](https://www.youtube.com/watch?v=mLjxXPHuIJo)._
 
- 
 What's the most important thing to you when visiting a website? Is it accessibility, is it responsiveness, or is it how intuitive it feels? Well according to Google, it's 🔥speed🔥, and it's not subjective. Speed, in this context, refers to how fast or how slow a page loads. The first graphic below shows that the time it takes to load a page is the **most** important factor in a users mobile experience.
 
 ![UX speed](./speedUXData.png)
