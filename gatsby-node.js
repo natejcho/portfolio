@@ -13,7 +13,7 @@ exports.createPages = async ({ graphql, actions }) => {
           limit: 1000
         ) {
           edges {
-            node {
+             {
               fields {
                 slug
               }
@@ -49,16 +49,42 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 }
+exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
+  const { createNodeField } = boundActionCreators
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+  if (node?.internal.type === `MarkdownRemark`) {
+    // Get the parent node
+    const parent = getNode(node?.parent)
 
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    // Create a field on this node for the "collection" of the parent
+    // NOTE: This is necessary so we can filter `allMarkdownRemark` by
+    // `collection` otherwise there is no way to filter for only markdown
+    // documents of type `post`.
     createNodeField({
-      name: `slug`,
       node,
-      value,
+      name: "collection",
+      value: parent?.sourceInstanceName,
     })
   }
 }
+
+// exports.onCreateNode = ({ node, actions, getNode }) => {
+//   const { createNodeField } = actions
+
+//   if (node.internal.type === `MarkdownRemark`) {
+//     const value = createFilePath({ node, getNode })
+//     createNodeField({
+//       name: `slug`,
+//       node,
+//       value,
+//     })
+//   } else if (node.internal.type === `MarkdownRemark` && getNode(node.parent).sourceInstanceName === "projects") {
+//     const value = createFilePath({ node, getNode })
+
+//     createNodeField({
+//       name: "slug",
+//       node,
+//       value: `/projects${value}`
+//     })
+//   }
+// }
