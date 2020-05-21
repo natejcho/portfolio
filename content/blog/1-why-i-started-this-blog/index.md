@@ -1,6 +1,7 @@
 ---
 title: Why I Started This Blog!
 date: "2019-11-02T23:46:37.121Z"
+hidden: true
 ---
 
 > "The three most harmful addictions are heroin, carbohydrates, and a monthly salary."
